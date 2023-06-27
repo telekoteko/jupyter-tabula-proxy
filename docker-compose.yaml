@@ -1,0 +1,15 @@
+version: "3.8"
+
+services:
+  jupyter:
+    image: jupyter/tabula
+    build:
+      context: .
+    container_name: notebook
+    restart: always
+    ports:
+      - 8889:8888
+
+volumes:
+  db:
+    name: db
